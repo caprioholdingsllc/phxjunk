@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHX Junk Haulers | How We Handle Junk Removal Projects</title>
+    <meta name="description" content="Junk removal in Phoenix. Clear process from estimate to haul-away. Residential and commercial cleanouts.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+            color: white;
+            padding: 1rem 2rem;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .phone {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hero {
+            background: #c2410c;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .process-intro {
+            max-width: 900px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+        .process-intro h2 {
+            color: #ea580c;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .process-intro p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .process-section {
+            background: #ffedd5;
+            padding: 3rem 2rem;
+            margin: 0 -2rem 3rem -2rem;
+        }
+        .process-section h2 {
+            text-align: center;
+            color: #ea580c;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            position: relative;
+            border-top: 4px solid #c2410c;
+        }
+        .process-step .step-number {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            background: #ea580c;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .process-step h3 {
+            color: #ea580c;
+            margin-top: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+        .process-step .timeline {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .process-step p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .services-section {
+            margin: 3rem 0;
+        }
+        .services-section h2 {
+            color: #ea580c;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #c2410c;
+        }
+        .service-card h3 {
+            color: #ea580c;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .availability-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 3rem -2rem;
+            border-top: 3px solid #c2410c;
+            border-bottom: 3px solid #c2410c;
+        }
+        .availability-section h2 {
+            text-align: center;
+            color: #ea580c;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .availability-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #ffedd5;
+            border-radius: 8px;
+        }
+        .availability-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .availability-card h3 {
+            color: #ea580c;
+            margin-bottom: 0.5rem;
+        }
+        .availability-card .time {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c2410c;
+            margin: 0.5rem 0;
+        }
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .form-section h2 {
+            color: #ea580c;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .form-section .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #c2410c;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">PHX Junk Haulers</div>
+            <div class="phone">📞 (623) 323-8664</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>How We Handle Junk Removal Projects</h1>
+        <p>A straightforward process from estimate to clean property.</p>
+    </section>
+
+    <div class="container">
+        <div class="process-intro">
+            <h2>Our Hauling Process</h2>
+            <p>Junk removal shouldn't be complicated. We give you a clear price, schedule a time, and haul everything away. You point, we load.</p>
+        </div>
+
+        <section class="process-section">
+            <h2>From Estimate to Empty Space</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Free Estimate</h3>
+                    <div class="timeline">⏱️ Over Phone or On-Site</div>
+                    <p>Describe what you need removed or send photos. We can usually give pricing over the phone. For larger jobs, we come look and provide exact quote.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Schedule Pickup</h3>
+                    <div class="timeline">⏱️ 1-3 Days Out</div>
+                    <p>Pick a time that works for you. We give 2-hour windows and call when we're on the way.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Load & Haul</h3>
+                    <div class="timeline">⏱️ 30 Min - 3 Hours</div>
+                    <p>You point at what goes, we load it. Our crew does all the lifting and loading. Most jobs done in under 2 hours.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Disposal & Cleanup</h3>
+                    <div class="timeline">⏱️ Before We Leave</div>
+                    <p>Sweep up area where items were. Take everything to proper disposal or donation centers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>What We Haul</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Furniture Removal</h3>
+                    <p>Old couches, mattresses, tables, chairs, and any furniture you need gone.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Appliance Haul-Away</h3>
+                    <p>Refrigerators, washers, dryers, stoves, and other large appliances.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Garage Cleanouts</h3>
+                    <p>Clear out accumulated junk, old tools, boxes, and storage items.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Yard Waste</h3>
+                    <p>Branches, palm fronds, dead plants, and yard debris removal.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Estate Cleanouts</h3>
+                    <p>Full house cleanouts after estate sales or moving situations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Construction Debris</h3>
+                    <p>Old fixtures, flooring, drywall, and remodeling waste.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="availability-section">
+            <h2>Timeline Expectations</h2>
+            <div class="availability-grid">
+                <div class="availability-card">
+                    <div class="icon">📞</div>
+                    <h3>Quote</h3>
+                    <div class="time">Same Day</div>
+                    <p>Call or text photos for pricing</p>
+                </div>
+                <div class="availability-card">
+                    <div class="icon">📅</div>
+                    <h3>Scheduling</h3>
+                    <div class="time">1-3 Days</div>
+                    <p>Book your pickup time</p>
+                </div>
+                <div class="availability-card">
+                    <div class="icon">🚛</div>
+                    <h3>Haul-Away</h3>
+                    <div class="time">30min-3hrs</div>
+                    <p>We load and remove everything</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Request Junk Removal</h2>
+            <p class="subtitle">Tell us what you need hauled away</p>
+            
+            <form id="leadForm" action="https://hook.us2.make.com/gzcbxb8x2e5xph37kjhm48ur4khvh7ir" method="POST">
+                <input type="hidden" name="site_id" value="PHX-JUNK-001">
+                <input type="hidden" name="market" value="Phoenix">
+                <input type="hidden" name="industry" value="Junk Removal">
+                <input type="hidden" name="lead_type" value="Service Request">
+                <input type="hidden" name="source_url" value="phxjunkhaulers.com">
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Pickup Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="job_type">Type of Job *</label>
+                    <select id="job_type" name="job_type" required>
+                        <option value="">Select...</option>
+                        <option value="Furniture">Furniture Removal</option>
+                        <option value="Appliances">Appliances</option>
+                        <option value="Garage Cleanout">Garage Cleanout</option>
+                        <option value="Yard Waste">Yard Waste</option>
+                        <option value="Full Cleanout">Full Cleanout</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">What Needs to Be Removed? *</label>
+                    <textarea id="details" name="details" required placeholder="List items or describe the junk removal job..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Get Free Quote</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 PHX Junk Haulers. Professional Junk Removal.</p>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                window.location.href = 'thanks.html';
+            }).catch(() => {
+                window.location.href = 'thanks.html';
+            });
+        });
+    </script>
+</body>
+</html>
